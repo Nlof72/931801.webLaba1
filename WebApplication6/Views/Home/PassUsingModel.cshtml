@@ -1,0 +1,33 @@
+﻿@{
+    Layout = null;
+}
+@model WebApplication6.ViewModels.NumsOperation
+<!doctype html>
+<html>
+<head>
+    <title>Hello ASP.NET MVC Core</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <link type="text/css" href="~/Style/Style.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <b>Backend1</b> <a href="~/Home/Index">Home</a>
+    </header>
+    <main>
+        <h1>PassUsingModel</h1>
+        <h3>Rand Value First : @Model.num1</h3>
+        <h3>Rand Value Second : @Model.num2</h3>
+        <h3>Add :</h3>
+        <p>@Model.sum()</p>
+        <h3>Sub :</h3>
+        <p>@Model.sub()</p>
+        <h3>Mult :</h3>
+        <p>@Model.mult()</p>
+        <h3>Div :</h3>
+        <p>@Model.div()</p>
+    </main>
+    <hr>
+    <footer>© @DateTime.Now.Year - Backend1</footer>
+</body>
+</html>
