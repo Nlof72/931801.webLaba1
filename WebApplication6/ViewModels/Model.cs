@@ -5,33 +5,31 @@ using System.Threading.Tasks;
 
 namespace WebApplication6.ViewModels
 {
-    public class NumsOperation
+    public class CalcOperation
     {
-        public NumsOperation()
+        public int input1 { get; set; }
+        public int input2 { get; set; }
+        public string operation { get; set; }
+
+        public CalcOperation() { }
+        public CalcOperation(int inp1, int inp2, string oper)
         {
-            Random rand = new Random();
-            num1 = rand.Next(0, 10);
-            num2 = rand.Next(0, 10);
+            input1 = inp1;
+            input2 = inp2;
+            operation = oper;
         }
-        public int num1 { get; set; }
-        public int num2 { get; set; }
-        public string sum()
+        public string Calc()
         {
-            return num1 +" + "+num2+" = "+(num1 + num2);
-        }
-        public string sub()
-        {
-            return num1 + " - " + num2 + " = " + (num1 - num2);
-        }
-        public string mult()
-        {
-            return num1 + " * " + num2 + " = " + (num1 * num2);
-        }
-        public string div()
-        {
-            try { return num1 + " / " + num2 + " = " + (num1 / num2); }
-            catch { return "Division by 0"; }
-            
+            string res = "";
+            if (operation == "+") { res = (input1 + input2).ToString(); }
+            if (operation == "-") { res = (input1 - input2).ToString(); }
+            if (operation == "*") { res = (input1 * input2).ToString(); }
+            if (operation == "/")
+            {
+                if (input2 == 0) res = "divider is eaquel 0";
+                else res = ((double)input1 / input2).ToString();
+            }
+            return res;
         }
     }
 }

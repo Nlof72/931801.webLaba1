@@ -32,8 +32,9 @@ D:\C++\projects\WebApplication6\WebApplication6\obj\Debug\net5.0\ref\WebApplicat
 D:\C++\projects\WebApplication6\WebApplication6\obj\Debug\net5.0\WebApplication6.pdb
 D:\C++\projects\WebApplication6\WebApplication6\obj\Debug\net5.0\WebApplication6.genruntimeconfig.cache
 D:\C++\projects\WebApplication6\WebApplication6\obj\Debug\net5.0\WebApplication6.csproj.CopyComplete
-D:\C++\projects\WebApplication6\WebApplication6\obj\Debug\net5.0\Razor\Views\Home\PassUsingModel.cshtml.g.cs
-D:\C++\projects\WebApplication6\WebApplication6\obj\Debug\net5.0\Razor\Views\Home\PassUsingViewData.cshtml.g.cs
-D:\C++\projects\WebApplication6\WebApplication6\obj\Debug\net5.0\Razor\Views\Home\PassUsingViewBag.cshtml.g.cs
-D:\C++\projects\WebApplication6\WebApplication6\obj\Debug\net5.0\Razor\Views\Home\AccessServiceDirectly.cshtml.g.cs
 D:\C++\projects\WebApplication6\WebApplication6\bin\Debug\net5.0\wwwroot\Style\Style.css
+D:\C++\projects\WebApplication6\WebApplication6\obj\Debug\net5.0\Razor\Views\Home\MPinSingleAction.cshtml.g.cs
+D:\C++\projects\WebApplication6\WebApplication6\obj\Debug\net5.0\Razor\Views\Home\ModelBindingsPar.cshtml.g.cs
+D:\C++\projects\WebApplication6\WebApplication6\obj\Debug\net5.0\Razor\Views\Home\ModelBindingsSepModel.cshtml.g.cs
+D:\C++\projects\WebApplication6\WebApplication6\obj\Debug\net5.0\Razor\Views\Home\MPinSeparateAction.cshtml.g.cs
+D:\C++\projects\WebApplication6\WebApplication6\obj\Debug\net5.0\Razor\Views\Home\Result.cshtml.g.cs

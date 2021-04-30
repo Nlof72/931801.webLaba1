@@ -1,8 +1,6 @@
 ﻿@{
     Layout = null;
 }
-@using WebApplication6.Services
-@inject Calc calc
 <!doctype html>
 <html>
 <head>
@@ -16,17 +14,17 @@
         <b>Backend1</b> <a href="~/Home/Index">Home</a>
     </header>
     <main>
-        <h1>AccessServiceDirectly</h1>
-        <h3>Rand Value First : @calc.num1</h3>
-        <h3>Rand Value Second : @calc.num2</h3>
-        <h3>Add :</h3>
-        <p>@calc.sum()</p>
-        <h3>Sub :</h3>
-        <p>@calc.sub()</p>
-        <h3>Mult :</h3>
-        <p>@calc.mult()</p>
-        <h3>Div :</h3>
-        <p>@calc.div()</p>
+        <form method="post" action="~/Home/ModBindSepMod">
+            <input type="number" name="input1" />
+            <select name="operation">
+                <option>+</option>
+                <option>-</option>
+                <option>*</option>
+                <option>/</option>
+            </select>
+            <input type="number" name="input2" />
+            <input type="submit" value="Calc" />
+        </form>
     </main>
     <hr>
     <footer>© @DateTime.Now.Year - Backend1</footer>

@@ -14,17 +14,17 @@
         <b>Backend1</b> <a href="~/Home/Index">Home</a>
     </header>
     <main>
-        <h1>PassUsingViewBag</h1>
-        <h3>Rand Value First : @ViewBag.Nums.num1</h3>
-        <h3>Rand Value Second : @ViewBag.Nums.num2</h3>
-        <h3>Add :</h3>
-        <p>@ViewBag.Nums.sum()</p>
-        <h3>Sub :</h3>
-        <p>@ViewBag.Nums.sub()</p>
-        <h3>Mult :</h3>
-        <p>@ViewBag.Nums.mult()</p>
-        <h3>Div :</h3>
-        <p>@ViewBag.Nums.div()</p>
+        <form method="post" action="~/Home/MPinSA">
+            <input type="number" name="input1" />
+            <select name="operation">
+                <option>+</option>
+                <option>-</option>
+                <option>*</option>
+                <option>/</option>
+            </select>
+            <input type="number" name="input2" />
+            <input type="submit" value="Calc" />
+        </form>
     </main>
     <hr>
     <footer>© @DateTime.Now.Year - Backend1</footer>
