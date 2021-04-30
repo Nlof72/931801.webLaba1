@@ -4,7 +4,7 @@
 <!doctype html>
 <html>
 <head>
-    <title>----</title>
+    <title>Model Bindings In Parametrs</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width">
     <link type="text/css" href="~/Style/Style.css" rel="stylesheet">
@@ -14,16 +14,20 @@
         <b>Backend1</b> <a href="~/Home/Index">Home</a>
     </header>
     <main>
+        <h2>ModelBindingsInParametrs</h2>
         <form method="post" action="~/Home/ModBindPar">
             <input type="number" name="input1" />
+            <br />
             <select name="operation">
                 <option>+</option>
                 <option>-</option>
                 <option>*</option>
                 <option>/</option>
             </select>
+            <br />
             <input type="number" name="input2" />
-            <input type="submit" value="Calc" />
+            <br />
+            <input type="submit" value="Submit" />
         </form>
     </main>
     <hr>
