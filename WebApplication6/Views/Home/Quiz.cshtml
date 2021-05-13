@@ -16,10 +16,10 @@
     <main>
         <h2>Quiz</h2>
         <form>
-            <div>
-                <input name="input1" class="InputHide" value="@ViewBag.input1" />
-                <input name="operation" class="InputHide" value="@ViewBag.operation" />
-                <input name="input2"  class="InputHide" value="@ViewBag.input2" />
+            <div style="visibility: hidden">
+                <input name="input1"  value="@ViewBag.input1" />
+                <input name="operation"  value="@ViewBag.operation" />
+                <input name="input2"  value="@ViewBag.input2" />
             </div>
 
             <b>@ViewBag.input1 @ViewBag.operation @ViewBag.input2 =</b>
@@ -31,7 +31,7 @@
                 <button formmethod="post" formaction="~/Home/Next" type="submit">
                     Next
                 </button>
-                <button formmethod="post" formaction="~/Home/Result1" type="submit">
+                <button formmethod="post" style="background-color:Highlight" formaction="~/Home/Result1" type="submit">
                     Finish
                 </button>
             </div>

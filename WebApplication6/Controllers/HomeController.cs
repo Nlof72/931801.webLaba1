@@ -20,6 +20,13 @@ namespace WebApplication6.Controllers
             GenerateInputNumbersAndOperPlusMinus();
             return View();
         }
+        public IActionResult Result()
+        {
+            ViewBag.results = result;
+            ViewBag.allquestion = (wrong + right);
+            ViewBag.right = right;
+            return View();
+        }
 
         void GenerateInputNumbersAndOperPlusMinus()
         {
@@ -34,46 +41,33 @@ namespace WebApplication6.Controllers
         }
 
         [HttpPost]
-        public IActionResult Next(int input1, int input2, string operation, int answer)
+        public IActionResult Next(int input1, int input2, string operation, string answer)
         {
             if (CheckAnswer(input1, input2, operation, answer)) right++;
             else wrong++;
             result.Add($"{input1} {operation} {input2} = {answer}");
             GenerateInputNumbersAndOperPlusMinus();
-            Console.WriteLine(right+"  "+wrong);
             return View("Quiz");
         }
 
-        bool CheckAnswer(int input1, int input2, string operation, int answer)
+        bool CheckAnswer(int input1, int input2, string operation, string answer)
         {
             int res = 0; ;
             if (operation == "+") res = input1 + input2;
-            if (operation == "-") res = input1 + input2;
-            return res == answer;
+            if (operation == "-") res = input1 - input2;
+            return res.ToString() == answer;
         }
 
         [HttpPost]
-        public IActionResult Result1(int input1, int input2, string operation, int answer)
+        public IActionResult Result1(int input1, int input2, string operation, string answer)
         {
             if (CheckAnswer(input1, input2, operation, answer)) right++;
             else wrong++;
+            result.Add($"{input1} {operation} {input2} = {answer}");
             ViewBag.results = result;
             ViewBag.allquestion = (wrong+right);
             ViewBag.right = right;
             return View("Result");
-        }
-
-        string Calc(int inp1, int inp2, string oper)
-        {
-            string res = "";
-            if (oper == "+") { res = (inp1 + inp2).ToString(); }
-            if (oper == "-") { res = (inp1 - inp2).ToString(); }
-            if (oper == "*") { res = (inp1 * inp2).ToString(); }
-            if (oper == "/") {
-                if (inp2 == 0) res = "divider is eaquel 0";
-                else res = ((double)inp1 / inp2).ToString();
-            }
-            return res;
         }
 
     }

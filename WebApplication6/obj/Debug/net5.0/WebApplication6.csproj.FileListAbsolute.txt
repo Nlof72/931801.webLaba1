@@ -34,3 +34,4 @@ D:\C++\projects\WebApplication6\WebApplication6\obj\Debug\net5.0\WebApplication6
 D:\C++\projects\WebApplication6\WebApplication6\bin\Debug\net5.0\wwwroot\Style\Style.css
 D:\C++\projects\WebApplication6\WebApplication6\obj\Debug\net5.0\Razor\Views\Home\Result.cshtml.g.cs
 D:\C++\projects\WebApplication6\WebApplication6\obj\Debug\net5.0\Razor\Views\Home\Quiz.cshtml.g.cs
+D:\C++\projects\WebApplication6\WebApplication6\obj\Debug\net5.0\WebApplication6.csprojAssemblyReference.cache
