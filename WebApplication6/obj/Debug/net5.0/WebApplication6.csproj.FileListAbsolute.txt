@@ -9,7 +9,6 @@ D:\C++\projects\WebApplication6\WebApplication6\bin\Debug\net5.0\ref\WebApplicat
 D:\C++\projects\WebApplication6\WebApplication6\bin\Debug\net5.0\WebApplication6.pdb
 D:\C++\projects\WebApplication6\WebApplication6\bin\Debug\net5.0\WebApplication6.Views.dll
 D:\C++\projects\WebApplication6\WebApplication6\bin\Debug\net5.0\WebApplication6.Views.pdb
-D:\C++\projects\WebApplication6\WebApplication6\obj\Debug\net5.0\WebApplication6.csprojAssemblyReference.cache
 D:\C++\projects\WebApplication6\WebApplication6\obj\Debug\net5.0\WebApplication6.GeneratedMSBuildEditorConfig.editorconfig
 D:\C++\projects\WebApplication6\WebApplication6\obj\Debug\net5.0\WebApplication6.AssemblyInfoInputs.cache
 D:\C++\projects\WebApplication6\WebApplication6\obj\Debug\net5.0\WebApplication6.AssemblyInfo.cs
