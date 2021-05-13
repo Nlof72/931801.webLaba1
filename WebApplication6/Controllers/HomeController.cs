@@ -1,85 +1,66 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using WebApplication6.ViewModels;
 using System;
+using System.Collections.Generic;
 
 namespace WebApplication6.Controllers
 {
     public class HomeController:Controller
     {
+        Random rnd = new Random();
+        static List<string> result = new List<string>();
+        static int right = 0;
+        static int wrong = 0;
         public IActionResult Index()
         {
             return View();
         }
 
-        public IActionResult MPinSingleAction()
+        public IActionResult Quiz()
         {
-            return View();
-        }
-        public IActionResult MPinSeparateAction()
-        {
-            return View();
-        }
-        public IActionResult ModelBindingsPar()
-        {
-            return View();
-        }
-        public IActionResult ModelBindingsSepModel()
-        {
+            GenerateInputNumbersAndOperPlusMinus();
             return View();
         }
 
-        public IActionResult MPinSA()
+        void GenerateInputNumbersAndOperPlusMinus()
         {
-            if (Request.Method.Equals("POST", StringComparison.OrdinalIgnoreCase))
+            ViewBag.input1 = (int)(rnd.NextDouble() * 10);
+            ViewBag.input2 = (int)(rnd.NextDouble() * 10);
+            if (rnd.NextDouble() >= 0.5)
             {
-                var value1 = Convert.ToInt32(Request.Form["input1"]);
-                var value2 = Convert.ToInt32(Request.Form["input2"]);
-                var operation = Request.Form["operation"];
-
-                ViewBag.output1 = value1;
-                ViewBag.output2 = value2;
-                ViewBag.operation = operation;
-                ViewBag.result = Calc(value1, value2, operation);
+                ViewBag.operation = "+";
+                return;
             }
-            return View("Result");
-        }
-
-        [HttpGet]
-        public IActionResult MPinSepA()
-        {
-            return View("MPinSeparateAction");
-        }
-
-        [HttpPost, ActionName("MPinSepA")]
-        public IActionResult MPinSepAPost()
-        {
-            var value1 = Convert.ToInt32(Request.Form["input1"]);
-            var value2 = Convert.ToInt32(Request.Form["input2"]);
-            var operation = Request.Form["operation"];
-
-            ViewBag.output1 = value1;
-            ViewBag.output2 = value2;
-            ViewBag.operation = operation;
-            ViewBag.result = Calc(value1, value2, operation);
-            return View("Result");
+            ViewBag.operation = "-";
         }
 
         [HttpPost]
-        public IActionResult ModBindPar(int input1, int input2, string operation)
+        public IActionResult Next(int input1, int input2, string operation, int answer)
         {
-            ViewBag.output1 = input1;
-            ViewBag.output2 = input2;
-            ViewBag.operation = operation;
-            ViewBag.result = Calc(input1, input2, operation);
-            return View("Result");
+            if (CheckAnswer(input1, input2, operation, answer)) right++;
+            else wrong++;
+            result.Add($"{input1} {operation} {input2} = {answer}");
+            GenerateInputNumbersAndOperPlusMinus();
+            Console.WriteLine(right+"  "+wrong);
+            return View("Quiz");
         }
 
-        public IActionResult ModBindSepMod(CalcOperation calc)
+        bool CheckAnswer(int input1, int input2, string operation, int answer)
         {
-            ViewBag.output1 = calc.input1;
-            ViewBag.output2 = calc.input2;
-            ViewBag.operation = calc.operation;
-            ViewBag.result = calc.Calc();
+            int res = 0; ;
+            if (operation == "+") res = input1 + input2;
+            if (operation == "-") res = input1 + input2;
+            return res == answer;
+        }
+
+        [HttpPost]
+        public IActionResult Result1(int input1, int input2, string operation, int answer)
+        {
+            if (CheckAnswer(input1, input2, operation, answer)) right++;
+            else wrong++;
+            ViewBag.results = result;
+            ViewBag.allquestion = (wrong+right);
+            ViewBag.right = right;
             return View("Result");
         }
 

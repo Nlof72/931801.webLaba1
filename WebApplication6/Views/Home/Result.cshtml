@@ -14,8 +14,13 @@
         <b>Backend1</b> <a href="~/Home/Index">Home</a>
     </header>
     <main>
-        <h2>Result</h2>
-        @ViewBag.output1 @ViewBag.operation @ViewBag.output2 = @ViewBag.result
+        <h2>Quiz Result</h2>
+        <h3>Right answers @ViewBag.right of @ViewBag.allquestion</h3>
+
+        @for(int i = 0; i < ViewBag.results.Count; i++)
+        {
+            <h4> @(i). @ViewBag.results[i] </h4>
+        }
     </main>
     <hr>
     <footer>© @DateTime.Now.Year - Backend1</footer>
