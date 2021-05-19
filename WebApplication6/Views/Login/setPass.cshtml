@@ -1,0 +1,52 @@
+﻿@model WebApplication6.Model.SignUpModel
+
+@{
+    Layout = null;
+}
+
+<!doctype html>
+<html>
+<head>
+    <title>Quiz</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <link type="text/css" href="~/Style/Style.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <b>Backend3</b> <a href="~/Home/Index">Home Mockups</a>
+    </header>
+    <main>
+
+        <form method="post">
+            <div asp-validation-summary="All"></div>
+            <label>
+                <b>Email</b>
+            </label><br />
+            <input type="text" name="email" /><br />
+            <label><b>Password</b></label><br />
+            <input type="text" name="password" /><br />
+            <label>
+                <b>Confirm password</b>
+            </label><br />
+            <input type="text" name="confirm" /><br /><br />
+            <input type="checkbox" name="remember" value="true" />
+            <label>Remember?</label>
+
+            <p><input name="submit" type="submit" formaction="~/Login/Result" value="Complete Sign Up" /></p>
+            <div style="visibility: hidden">
+                <input name="firstName" value=@Model.firstName>
+                <input name="lasttName" value=@Model.lasttName>
+                <input name="day" value=@Model.day>
+                <input name="month" value=@Model.month>
+                <input name="year" value=@Model.year>
+                <input name="gender" value=@Model.gender>
+            </div>
+        </form>
+
+    </main>
+    <hr>
+    <footer>© @DateTime.Now.Year - Backend3</footer>
+</body>
+</html>

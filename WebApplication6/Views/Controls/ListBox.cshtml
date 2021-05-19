@@ -1,0 +1,48 @@
+﻿@{
+    Layout = null;
+}
+<!doctype html>
+<html>
+<head>
+    <title>Quiz</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <link type="text/css" href="~/Style/Style.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <b>Backend3</b> <a href="~/Home/Index">Home Mockups</a>
+    </header>
+    <main>
+        <h2>List Box</h2>
+        <form>
+
+            <h4>Month</h4>
+            <select name="value" size="4">
+                <option value="January" />January
+                <option value="February" />February
+                <option value="March" />March
+                <option value="April" />April
+                <option value="May" />May
+                <option value="June" />June
+                <option value="Jule" />Jule
+                <option value="August" />August
+                <option value="September" />September
+                <option value="Octomber" />Octomber
+                <option value="November" />November
+                <option value="December" />December
+            </select>
+            <br />
+            <button formmethod="post" formaction="~/Controls/GetDataFromView" type="submit">
+                submit
+            </button>
+            <div style="visibility: hidden">
+                <input name="tag" value="List Box" />
+                <input name="input1" value="Month" />
+            </div>
+        </form>
+    </main>
+    <hr>
+    <footer>© @DateTime.Now.Year - Backend3</footer>
+</body>
+</html>

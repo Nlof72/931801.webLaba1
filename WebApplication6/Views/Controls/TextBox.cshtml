@@ -1,0 +1,33 @@
+﻿@{
+    Layout = null;
+}
+<!doctype html>
+<html>
+<head>
+    <title>Quiz</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <link type="text/css" href="~/Style/Style.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <b>Backend3</b> <a href="~/Home/Index">Home Mockups</a>
+    </header>
+    <main>
+        <h2>Text Box</h2>
+        <form>
+            <div style="visibility: hidden">
+                <input name="tag" value="Text Box" />
+                <input name="input1" value="Text" />
+            </div>
+            <input name="value" type="text" />
+            <br />
+            <button formmethod="post" formaction="~/Controls/GetDataFromView" type="submit">
+                submit
+            </button>
+        </form>
+    </main>
+    <hr>
+    <footer>© @DateTime.Now.Year - Backend3</footer>
+</body>
+</html>

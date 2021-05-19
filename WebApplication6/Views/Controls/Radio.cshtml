@@ -1,0 +1,48 @@
+﻿@{
+    Layout = null;
+}
+<!doctype html>
+<html>
+<head>
+    <title>Quiz</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <link type="text/css" href="~/Style/Style.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <b>Backend3</b> <a href="~/Home/Index">Home Mockups</a>
+    </header>
+    <main>
+        <h2>Radio</h2>
+        <form>
+
+            <h4>Month</h4>
+            <ul>
+                <li><input name="value" type="radio" value="January" />January</li>
+                <li><input name="value" type="radio" value="February" />February</li>
+                <li><input name="value" type="radio" value="March" />March</li>
+                <li><input name="value" type="radio" value="April" />April</li>
+                <li><input name="value" type="radio" value="May" />May</li>
+                <li><input name="value" type="radio" value="June" />June</li>
+                <li><input name="value" type="radio" value="Jule" />Jule</li>
+                <li><input name="value" type="radio" value="August" />August</li>
+                <li><input name="value" type="radio" value="September" />September</li>
+                <li><input name="value" type="radio" value="Octomber" />Octomber</li>
+                <li><input name="value" type="radio" value="November" />November</li>
+                <li><input name="value" type="radio" value="December" />December</li>
+            </ul>
+            <br />
+            <button formmethod="post" formaction="~/Controls/GetDataFromView" type="submit">
+                submit
+            </button>
+            <div style="visibility: hidden">
+                <input name="tag" value="Radio" />
+                <input name="input1" value="Month" />
+            </div>
+        </form>
+    </main>
+    <hr>
+    <footer>© @DateTime.Now.Year - Backend3</footer>
+</body>
+</html>

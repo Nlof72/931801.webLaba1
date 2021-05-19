@@ -1,0 +1,37 @@
+﻿@model WebApplication6.Model.SignUpModel
+
+@{
+    Layout = null;
+}
+
+<!doctype html>
+<html>
+<head>
+    <title>Quiz</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <link type="text/css" href="~/Style/Style.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <b>Backend3</b> <a href="~/Home/Index">Home Mockups</a>
+    </header>
+    <main>
+
+        <form method="post">
+            <label>
+                <b>Reset your password</b>
+            </label><br />
+
+            <label>code</label>
+            <br />
+            <input type="text" name="Code" />
+            <br />
+            <button formaction="~/Login/Next">Verify</button>
+        </form>
+    </main>
+    <hr>
+    <footer>© @DateTime.Now.Year - Backend3</footer>
+</body>
+</html>
